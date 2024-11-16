@@ -27,7 +27,7 @@ auxiliary/
 └── vsploit
 ```
 # Encoder is a module used to obfuscate (encode) payloads to avoid detection by security solutions. Encoders transform the payload into a different format, making it harder for security tools to detect it while preserving its functionality.
-
+```
 root@ip-10-10-135-188:/opt/metasploit-framework/embedded/framework/modules# tree -L 1 encoders/
 encoders/
 ├── cmd
@@ -40,9 +40,10 @@ encoders/
 ├── sparc
 ├── x64
 └── x86
-
-# Evasion modules focus on avoiding detection during the entire attack process. This includes obfuscating the payload, modifying delivery methods, or exploiting weaknesses in security tools.
-
+```
+# Evasion
+Modules focus on avoiding detection during the entire attack process. This includes obfuscating the payload, modifying delivery methods, or exploiting weaknesses in security tools.
+```
 root@ip-10-10-135-188:/opt/metasploit-framework/embedded/framework/modules# tree -L 2 evasion/
 evasion/
 └── windows
@@ -55,9 +56,10 @@ evasion/
     ├── syscall_inject.rb
     ├── windows_defender_exe.rb
     └── windows_defender_js_hta.rb
-
-# Exploit modules are categorized based on their targets, such as operating systems, applications, or services
-
+```
+# Exploit 
+Modules are categorized based on their targets, such as operating systems, applications, or services
+```
 root@ip-10-10-135-188:/opt/metasploit-framework/embedded/framework/modules# tree -L 1 exploits/
 exploits/
 ├── aix
@@ -84,7 +86,8 @@ exploits/
 ├── solaris
 ├── unix
 └── windows
-
+```
+```
 ## Remote Exploits:
 Exploits vulnerabilities in network services, allowing attackers to compromise a target remotely.
 Example: exploit/windows/smb/ms17_010_eternalblue
@@ -104,9 +107,10 @@ Targets: Apache Struts framework with remote code execution (RCE) vulnerability.
 Targets applications running on the victim's machine, such as browsers, PDF readers, or email clients.
 Example: exploit/multi/browser/adobe_flash_hacking_team_uaf
 Targets: Vulnerable Adobe Flash Player.
-
-# NOPs (No Operation) refer to special instructions or padding used in exploit development to create "no-operation" filler code that does nothing when executed. They are often used to align payloads, avoid bad characters, or provide buffer space during exploitation.
-
+```
+# NOPs (No Operation)
+Instructions or padding used in exploit development to create "no-operation" filler code that does nothing when executed. They are often used to align payloads, avoid bad characters, or provide buffer space during exploitation.
+```
 root@ip-10-10-135-188:/opt/metasploit-framework/embedded/framework/modules# tree -L 1 nops/
 nops/
 ├── aarch64
@@ -119,9 +123,10 @@ nops/
 ├── tty
 ├── x64
 └── x86 
-
-# Payload is a piece of code delivered to the target system after a vulnerability is successfully exploited. It defines what action is taken after the exploit succeeds, such as opening a reverse shell, injecting malicious code, or collecting sensitive information.
-
+```
+# Payload 
+Delivered to the target system after a vulnerability is successfully exploited. It defines what action is taken after the exploit succeeds, such as opening a reverse shell, injecting malicious code, or collecting sensitive information.
+```
 root@ip-10-10-135-188:/opt/metasploit-framework/embedded/framework/modules# tree -L 1 payloads/
 payloads/
 ├── adapters - wraps single payloads to convert them into different formats
@@ -134,9 +139,10 @@ Reduces the size of the initial payload.
 Can bypass certain security mechanisms due to its small size.
 └── stages  -  The actual payload delivered by the stager.
 Performs the main malicious task, such as interacting with the system or stealing data.
-
-# Post-exploitation modules, which are tools and scripts used after successfully compromising a target system. These modules focus on gathering information, maintaining access, or performing further actions on the compromised system.
-
+```
+# Post-exploitation 
+Tools and scripts used after successfully compromising a target system. These modules focus on gathering information, maintaining access, or performing further actions on the compromised system.
+```
 root@ip-10-10-135-188:/opt/metasploit-framework/embedded/framework/modules# tree -L 1 post/
 post/
 ├── aix
@@ -151,3 +157,4 @@ post/
 ├── osx
 ├── solaris
 └── windows
+```
