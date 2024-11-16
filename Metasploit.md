@@ -1,5 +1,6 @@
-# Auxiliary is category of modules that are used for a variety of tasks other than exploiting a specific vulnerability. Auxiliary modules are designed to perform functions such as scanning, enumeration, and network services testing. Unlike exploit modules, auxiliary modules do not attempt to gain control of a system but instead focus on gathering information or testing vulnerabilities.
-
+# Auxiliary
+category of modules that are used for a variety of tasks other than exploiting a specific vulnerability. Auxiliary modules are designed to perform functions such as scanning, enumeration, and network services testing. Unlike exploit modules, auxiliary modules do not attempt to gain control of a system but instead focus on gathering information or testing vulnerabilities.
+```
 root@ip-10-10-135-188:/opt/metasploit-framework/embedded/framework/modules# tree -L 1 auxiliary/
 auxiliary/
 ├── admin
@@ -24,7 +25,7 @@ auxiliary/
 ├── sqli
 ├── voip
 └── vsploit
-
+```
 # Encoder is a module used to obfuscate (encode) payloads to avoid detection by security solutions. Encoders transform the payload into a different format, making it harder for security tools to detect it while preserving its functionality.
 
 root@ip-10-10-135-188:/opt/metasploit-framework/embedded/framework/modules# tree -L 1 encoders/
