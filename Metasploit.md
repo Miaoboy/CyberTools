@@ -26,7 +26,8 @@ auxiliary/
 ├── voip
 └── vsploit
 ```
-# Encoder is a module used to obfuscate (encode) payloads to avoid detection by security solutions. Encoders transform the payload into a different format, making it harder for security tools to detect it while preserving its functionality.
+# Encoder 
+Module used to obfuscate (encode) payloads to avoid detection by security solutions. Encoders transform the payload into a different format, making it harder for security tools to detect it while preserving its functionality.
 ```
 root@ip-10-10-135-188:/opt/metasploit-framework/embedded/framework/modules# tree -L 1 encoders/
 encoders/
