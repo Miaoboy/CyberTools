@@ -3,6 +3,17 @@
   
 - 1024 well-known ports
 
+nmap scan port with TCP three way hand shake 
+```
+If Port on
+-SYN-SYN/ACK-ACK
+
+If Port close
+-SYN-RST(RESET)
+
+But firewall like iptable in linux can simply block with send rst flag
+ iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset
+```
 # nmap -h 
 
 Usage: nmap [Scan Type(s)] [Options] {target specification}
