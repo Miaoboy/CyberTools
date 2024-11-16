@@ -14,6 +14,12 @@ If Port close
 But firewall like iptable in linux can simply block with send rst flag
  iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset
 ```
+Syn Scan
+```
+Half-open and stealthy
+send rst to server if receive a ack flag 
+faster, less interact, more  stealthy but require sudo
+```
 # nmap -h 
 
 Usage: nmap [Scan Type(s)] [Options] {target specification}
