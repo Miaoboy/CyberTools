@@ -20,6 +20,30 @@ Half-open and stealthy
 send rst to server if receive a ack flag 
 faster, less interact, more  stealthy but require sudo
 ```
+## These scan used cause firewall evasion
+FIN
+```
+send a FIN flag, end the TCP connection
+```
+Null
+```
+send a nothing to get rst flag
+```
+Xmas
+```
+send FIN
+URG(URGET)  receiving TCP stack processes the "urgent" data before handling any other queued data.
+PSH(PUSH)  	Instructs the receiver to forward data immediately.
+```
+# Nmap Scripting Engine (NSE)
+safe:- Won't affect the target
+intrusive:- Not safe: likely to affect the target
+vuln:- Scan for vulnerabilities
+exploit:- Attempt to exploit a vulnerability
+auth:- Attempt to bypass authentication for running services (e.g. Log into an FTP server anonymously)
+brute:- Attempt to bruteforce credentials for running services
+discovery:- Attempt to query running services for further information about the network (e.g. query an SNMP server).
+
 # nmap -h 
 
 Usage: nmap [Scan Type(s)] [Options] {target specification}
